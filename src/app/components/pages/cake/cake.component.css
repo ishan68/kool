@@ -1,0 +1,89 @@
+#product-page-container{
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+#product-page-container .product-image-div{
+    border:1px solid #e5e5e5;
+    padding:10px;
+    border-radius:3px;
+}
+
+.btn-primary{
+    background:#dc3a43;
+    border:none;
+}
+
+.list{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.list .value{
+    float:right;
+    margin-top:-25px;
+    font-weight:bold;
+}
+
+.shape-size-type p, .decoration p{
+    color:#dc3a43;
+}
+
+/*Description CSS*/
+
+
+#cake-description-tabs .nav-pills .nav-link.active{
+    background-color: #6c757d;
+}
+
+.tab-content{
+    padding:15px;
+}
+
+.serving-dropdown ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+.serving-dropdown .serving-value{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s
+}
+
+
+
+.serving-dropdown ul li{
+    padding: 1px 10px 1px 10px;
+    
+    cursor: pointer;
+    color:#495057;
+
+}
+
+.serving-dropdown ul li span{
+    float: right;
+}
+
+.serving-dropdown ul li:hover{
+    color: #FFF;
+    background-color: #1e90ff;
+}
+
+.serving-dropdown .serving-options{
+    box-shadow: 2px 2px 2px 2px #e5e5e5;
+    border: 1px solid #80bdff;
+    display: none;
+}

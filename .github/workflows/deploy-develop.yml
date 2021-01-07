@@ -1,0 +1,49 @@
+name: Deploy to server
+
+on:
+  push:
+    branches:
+    - develop
+
+jobs:
+  deploy:
+    env:
+      CI: false
+
+    name: Deploy build files to server
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Installing dependencies
+      run: npm install
+    
+    - name: Building Angular Files
+      run: |
+        sed -i 's/{{apiUrl}}/https:\/\/beta.api.dev.koolcakes.uk\/api\/v1/' src/environments/environment.prod.ts
+        npm run build:prod
+        
+    - name: Copy files to server
+      uses: appleboy/scp-action@master
+      with:
+        host: koolcakes.deploy.elze.win
+        username: static
+        KEY: ${{ secrets.KEY }}
+        port: 22
+        source: "dist/*"
+        target: /home/static/sites/koolcakes.uk/www/
+        rm: true
+        strip_components: 1

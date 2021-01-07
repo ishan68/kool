@@ -1,0 +1,39 @@
+<div class="container" id="category-page-container" style="max-width:1400px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Categories</li>
+            </ol>
+        </nav>
+        <div class="categories-div">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let category of categories">
+                    <div class="category-item">
+                        <div class='card'>
+                            <div class="card-body text-center">
+                                <span *ngIf="!category.isSubCategory">
+                                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: category._id}">
+                                        <img class="img-fluid" src="{{category.image}}"/>
+                                        <hr>
+                                        <h5>{{ category.name }}</h5>
+                                        
+                                    </a>
+                                </span>
+                                <span *ngIf="category.isSubCategory">
+                                    <a [routerLink] = "['/categories']"  [queryParams]="{parentCategoryId: category._id}">
+                                        <img class="img-fluid" src="{{category.image}}"/>
+                                        <hr>
+                                        <h5>{{ category.name }}</h5>
+                                        
+                                    </a>
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>

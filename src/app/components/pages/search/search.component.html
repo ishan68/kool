@@ -1,0 +1,57 @@
+
+<div class="container" id="search-page-container">
+        
+<!--         
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Search</li>
+            </ol>
+        </nav> -->
+
+        <div id="search-results">
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="results">
+                            <p>{{cakes.length}} results found for keyword "{{ searchKeyword }}"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        
+        <div class="categories-div">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let cake of cakes">
+                    <span *ngIf="!cake">
+                        <p>Hello there is not cake here</p>
+                    </span>
+                    <span *ngIf="cake">
+                        <div class="cake-item">
+                            <div class='card'>
+                                <div class="card-body text-center">
+                                    <a [routerLink] = "['/cake']" [queryParams]="{id: cake._id}">
+                                        <img class="img-fluid" src="{{cake.image}}"/>
+                                        <hr>
+                                        
+                                        
+                                    </a>
+                                    <p>{{ cake.name }}</p>
+                                    <p><i class="fa fa-gbp"></i>{{ cake.price }}</p>
+                                    
+                                    <a class="product-view-button" [routerLink] = "['/cake']" [queryParams]="{id: cake._id}">VIEW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>

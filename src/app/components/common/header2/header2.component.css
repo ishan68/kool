@@ -1,0 +1,90 @@
+#header{
+    padding: 10px;
+}
+
+
+#search-bar{
+    margin-top: 20px;
+}
+
+#header .cart-login{
+    margin-top:20px;
+    text-align: right;
+}
+
+#topbar a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+#bottom-header{
+    padding:10px;
+    background: #f7f7f7;
+}
+
+#bottom-header .menu-item{
+    text-align: center;
+}
+
+#bottom-header a{
+    color: #000;
+}
+
+#searched-cakes-div{
+    position: absolute;
+    width:95%;
+    z-index: 10000;
+}
+
+
+#searched-cakes-div ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    border: 1px solid #e5e5e5;
+}
+
+#searched-cakes-div ul li{
+    padding: 6px;
+    background-color: #FFF;
+    padding-left: 10px;
+    /* border-top: 1px solid #e5e5e5; */
+}
+
+#searched-cakes-div ul li:hover{
+    background-color: #e5e5e5;
+    /* border-top: 1px solid #e5e5e5; */
+}
+
+#searched-cakes-div ul li a{
+    text-decoration: none;
+    color: #222;
+    display: block;
+}
+
+#header .cart-login ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#header .cart-login ul li a{
+    text-decoration: none;
+    color:#222;
+    font-size: 1.5rem;
+}
+
+#bottom-header .dropdown-button:hover{
+    cursor: pointer;
+}
+
+
+
+/* CSS For Mobile */
+
+@media only screen and (max-width: 600px) {
+    #bottom-header .menu-item{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

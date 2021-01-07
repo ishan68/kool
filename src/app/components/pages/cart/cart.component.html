@@ -1,0 +1,89 @@
+<div class="container" id="cart-page-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
+        </nav>
+        <div class="row" *ngIf="isCartEmpty">
+            <div class="col-md-12 text-center">
+                <img src="./../../../../assets//images/empty-cart.jpg" alt="">
+                <h3>Your Cart is Empty!!</h3>
+                <br>
+                <a routerLink="/">GO TO HOME</a>
+            </div>
+        </div>
+        <div class="row" *ngIf="!isCartEmpty">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                      <th>Item</th>
+                      <th>Shape, Size & Type</th>
+                      <th>Decoration</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let lineItem of lineItems">
+                                    <td>
+                                       
+                                        <app-line-item [cakeId]="lineItem.cakeId"></app-line-item>
+                                    </td>
+                                    <td>
+                                        <ul class="shape-list list">
+                                            <li>Shape</li>
+                                            <li class="value">As Shown</li>
+                                        </ul>
+                                        <ul class="shape-list list">
+                                            <li>Serving</li>
+                                            <li class="value">{{ lineItem.serving || '--'}}</li>
+                                        </ul>
+                                        
+                                        <ul class="type-list list">
+                                            <li>Type</li>
+                                            <li class="value">{{ lineItem.type || '--'}}</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul class="sponge-type list">
+                                            <li>Sponge type</li>
+                                            <li class="value">{{ lineItem.sponge || '--' }}</li>
+                                        </ul>
+                                        <ul class="filling list">
+                                            <li>Select your filling</li>
+                                            <li class="value">{{ lineItem.filling || '--' }}</li>
+                                        </ul>
+                                        <ul class="special-requirements list">
+                                            <li>Dietary Requirements</li>
+                                            <li class="value">{{ lineItem.requirement || '--' }}</li>
+                                        </ul>
+                                        <ul class="message list">
+                                            <li>Would you like to add message onto the cake </li>
+                                            <li class="value">{{ lineItem.message || '--' }}</li>
+                                        </ul>
+                                        <ul class="message list">
+                                            <li>Writing Color</li>
+                                            <li class="value">{{ lineItem.writingColor || '--' }}</li>
+                                        </ul>
+                                    </td>
+                                    <td>{{lineItem.quantity}}</td>
+                                    <td><i class="fa fa-gbp"></i>&nbsp;{{lineItem.quantity * lineItem.price}}</td>
+                                    <td>
+                                        <a (click)="remove(lineItem.cakeId)" class="btn btn-danger btn-sm" style="color:#FFF">Delete</a>
+                                    </td>
+                                    </tr>
+                    </tbody>
+                </table>
+              </div>
+        </div>
+        <div class="row" *ngIf="!isCartEmpty">
+          <div class="col-md-12">
+            <div class="action-buttons pull-right">
+                <a routerLink="/checkout" class="btn btn-success">Proceed to Checkout</a>
+            </div>
+          
+          </div>
+        </div>
+     </div>
+    

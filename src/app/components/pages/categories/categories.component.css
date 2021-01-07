@@ -1,0 +1,33 @@
+#category-page-container{
+    padding-top:80px;
+    padding-bottom:60px;
+}
+
+.btn-primary{
+    background: #dc3a43;
+    border:none;    
+    border-radius:20px;
+    padding:5px 20px;
+    
+}
+
+.category-item{
+    margin-bottom:20px;
+}
+
+.category-item a{
+    text-decoration: none;
+}
+
+.category-item h5{
+    color:#222;
+}
+
+.category-item h6{
+    color:#dc3a43;
+}
+
+.category-row{
+    display: flex;
+    justify-content: space-between;
+}

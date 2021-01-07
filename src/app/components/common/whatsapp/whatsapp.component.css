@@ -1,0 +1,19 @@
+#whatsapp{
+    position: fixed;
+    right:0;
+    bottom: 5%;
+    padding:1.2rem;
+    text-align: center;
+    color:#FFF;
+    display: block;
+    background: #075E54;
+    z-index: 200;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#whatsapp a{
+    color:#FFF;
+    font-size: 2rem;
+    text-decoration: none;
+}

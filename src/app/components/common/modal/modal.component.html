@@ -1,0 +1,23 @@
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <br/><br/>
+          <div class="modal-message">
+            <h4>Until further notice, we have decided to briefly close our retail stores considering COVID-19</h4>
+            <br>
+            <h5>For any assistance, reach us on <a href="mail: support@koolcakes.uk" style="color: #FFF">support@koolcakes.uk</a> </h5>
+            <br>
+            <h5>We hope to come back soon and come back stronger.</h5>
+            <br><br>
+            <button type="button" class="btn pull-right" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                CLOSE
+              </button>
+          </div>
+    </div>
+    
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+  

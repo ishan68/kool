@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+div#topbar, .theme-background-color, .action-buttons-div a, input.btn.btn-primary.btn-block, 
+.dropdown-item.active, .dropdown-item:active, .cake-section h2:after  {
+    background-color: #5e1d48 !important;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #5e1d48;
+    border-color: #5e1d48;
+}
+.btn-danger:hover {
+    background-color: #5e1d48;
+    border-color: #5e1d48;
+}
+footer h4:after {
+	border: solid 2px #5e1d48 !importortant;
+}
+.shape-size-type p, .decoration p{
+	color: #5e1d48 !important;
+}
+iframe .theme-background-color {
+    background-color: #5e1d48   !important;
+}
+.carousel-control-next, .carousel-control-prev {
+   
+    width: 5% !important;
+    }
+.home_button {
+    padding-left: 3px !important;
+ }
+ .nav-link {
+    padding: 0;
+}
+.navbar-nav.mr-auto li a{
+    padding: 0 90px 0 10px;
+}
+.red{
+    color: red;
+}
+
+@media only screen and (max-width: 1180px) {
+#deals .deal-button-item{
+    width: 100%;
+}
+#deals .btn2 {
+    margin-top: 0rem;
+    padding: 10px 5px;
+    font-size: 0.8rem;
+    width: 100%;
+    float: left;
+}
+}
+
+@media only screen and (max-width: 991px) {
+#deals .col-md-2.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.design-item.text-center {
+    padding: 50px 20px 60px;
+    }
+div#bottom-header .row {
+    justify-content: center;
+}
+}
+
+@media only screen and (max-width: 767px) {
+#design-your-cake .col-md-6.col-6, #store-addresses .col-md-6.col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 10px 0;
+}
+#design-your-own-cake .design-item.text-center {
+    background-position: 0 0px;
+    background-repeat: no-repeat !important;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#header {
+    padding: 10px 0px !important;
+    }
+}   

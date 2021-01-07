@@ -1,0 +1,407 @@
+h2 {
+    position:relative;
+    text-align: center;
+    font-family: 'Bree Serif';
+    margin-bottom:80px;
+}
+/* #main-carousel{
+    margin-top:40px;
+} */
+#main-carousel .carousel-item img {
+    width:100%;
+}
+.my-btn {
+    background:#dc3a43;
+    color:#FFF;
+    /* display: block; */
+    text-decoration: none;
+    padding:8px 20px 8px 20px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    border-top-right-radius:30px;
+    cursor: pointer;
+    border-bottom-right-radius:30px;
+}
+#deals {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+#deals .deal-button-item {
+    margin-top:2rem;
+}
+#deals .deal-button-item {
+    text-align: center;
+}
+#deals h3{    
+    margin-bottom:2rem;
+}
+#category {
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+#category .category-item {
+    margin-bottom:2rem;
+}
+.cake-section {
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+.cake-section .item{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding:15px;
+    text-align:center;
+}
+.cake-section .item a{
+    text-decoration: none;
+}
+.cake-section .item hr{
+    margin-bottom:0;
+}
+.cake-section .item span{
+    font-size:1rem;
+    display:block;
+    color:#000;
+}
+#peppa-pig-cakes {    
+    margin-bottom:1rem;
+}
+.btn2{
+    border:1px solid #222;
+    color: #222;
+    margin-top:2rem;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.my-btn-small {
+    background:#dc3a43;
+    color:#FFF;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    padding:5px 15px 5px 15px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+}
+/* .my-btn:hover {
+    background:#FFF;
+    border:1px solid #dc3a43;
+    color:#dc3a43;
+    text-decoration: none;
+    padding:8px 20px 8px 20px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+} */
+h2:after {
+    content:'';
+    position:absolute;
+    left:0; right:0;
+    top:100%;
+    margin:20px auto;
+    width:5%;
+    height:5px;
+    background:#dc3a43;
+}
+/* #content-container{
+    max-width:1600px;
+    padding-left:30px;
+    padding-right:30px;
+} */
+#cake-categories{
+    padding-top:50px;
+    padding-bottom:50px;
+    margin-bottom:20px;
+}
+#cake-categories .category-image-div{
+    padding:10px;
+    text-align: center;
+    margin-bottom:30px;
+}
+#cake-categories .category-image-div a{
+    text-decoration: none;
+}
+#cake-categories .category-image{    
+    transition:transform 0.3s;
+}
+#cake-categories .category-image:hover{
+    transform:scale(1.08);
+}
+.hr{
+    margin-top:0px;
+}
+#most-selling-cakes{
+    margin-bottom:60px;
+}
+#most-selling-cakes .most-selling-image-div{
+    text-align: center;
+    padding:30px;
+}
+#wedding-and-anniversary{
+    margin-bottom:90px;
+}
+#wedding-and-anniversary .wedding-list p, #wedding-and-anniversary .anniversary-list p{
+    color:#dc3a43;
+    font-size:25px;
+    font-weight:500;
+}
+#wedding-and-anniversary .wedding-list ul, #wedding-and-anniversary .anniversary-list ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+#wedding-and-anniversary .wedding-list ul li a, #wedding-and-anniversary .anniversary-list ul li a {
+    text-decoration:none;
+    color:#222;
+}
+#wedding-and-anniversary .wedding-list ul li a:hover{
+    text-decoration:underline;
+}
+#wedding-and-anniversary .anniversary-list ul li a:hover{
+    text-decoration:underline;
+}
+#wedding-and-anniversary .wedding-list ul li, #wedding-and-anniversary .anniversary-list ul li{
+    list-style: none;
+    margin:0;
+    border-bottom:1px solid #e5e5e5;    
+    font-family: 'Muli';
+    font-size:20px;
+    padding:10px;
+}
+#gift-cake{
+    margin-bottom:80px;
+}
+#gift-cake .gift-cake-div{    
+    transition: transform 0.3s;    
+}
+#gift-cake .gift-cake-div a{
+    text-decoration: none;
+}
+#gift-cake .gift-cake-div:hover{
+    transform: scale(1.08);
+}
+#him-her{
+    margin-bottom:90px;
+}
+#him-her .her-row{
+    margin-bottom:50px;
+}
+#him-her .for-her-list, #him-her .for-him-list{
+    margin:10px auto;
+    display:block;
+    max-width:400px;
+}
+#him-her .for-her-list ul{
+    list-style:none;
+}
+#him-her .for-her-list ul li a, #him-her .for-him-list ul li a{
+    text-decoration:none;
+    color:#636466;
+}
+#him-her .for-her-list ul li a:hover, #him-her .for-him-list ul li a:hover{
+    text-decoration:underline;
+}
+#him-her .for-her-list ul li, #him-her .for-him-list ul li{
+    font-family: 'Muli';
+    font-size:20px;
+    color:#636466;
+    padding:8px;
+    border-bottom:1px solid #e5e5e5;
+}
+#him-her .for-her-list ul li i, #him-her .for-him-list ul li i{
+    float:right;
+    margin-top:8px;
+}
+#him-her .for-him-list ul{
+    list-style:none;
+}
+#build-cake{
+    margin-bottom:90px;
+}
+#explore-more{
+    margin-bottom:60px;
+}
+#explore-more h3{
+    font-family:'Bree Serif';
+}
+#explore-more .explore-image-div{
+    padding:40px;
+    text-align: center;
+    transition: transform 0.3s;    
+}
+#explore-more .explore-image-div:hover{
+    transform:scale(1.08);
+}
+#trust-points{
+    padding-bottom: 20px;
+}
+#trust-points .trust-block{
+    border-right:1px solid #ddd;
+}
+#trust-points .last-trust-block{
+    border-right:none;  
+}
+#trust-points .trust-block .trust-icon {
+    font-size:80px;
+    color:#333;
+}
+#carousel-div{
+    padding:15px;
+}
+#carousel-div .category-div {
+    text-align: center;    
+}
+#carousel-div .category-div p{
+    margin-top:5px;
+    font-size:18px;
+}
+#carousel-div .category-div a{
+    text-decoration: none;
+    color:#000;
+}
+
+/*CSS For Mobile*/
+
+@media only screen and (max-width: 600px) {
+    #content-container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    h2 {
+        margin-bottom:50px;
+    }
+    h2:after {
+       width:15%;       
+    }
+    #wedding-and-anniversary .anniversary-image-div, #wedding-and-anniversary .wedding-image-div  {
+        display:none;
+    }
+    #wedding-and-anniversary .anniversary-list {
+        margin-top:40px;
+    }
+    #main-carousel {
+        display: none;
+    }
+    #him-her{
+        margin-bottom:30px;
+    }
+    #gift-cake{
+        margin-bottom:20px;
+    }
+    #gift-cake .gift-cake-div{
+        margin-bottom:30px;
+    }
+    #build-cake {
+        margin-bottom:20px;
+    }
+    #him-her .her-row{
+        margin-bottom:20px;
+    }
+    .for-her-image, .for-him-image {
+        display:none;
+    }
+    #explore-more .explore-image-div{
+        padding:5px;
+        margin-bottom:40px;
+    }
+    #trust-points .trust-block{
+        border-right:none;
+    }
+}
+/*End of My CSS*/
+/*Modal CSS */
+.modal-body{
+    /* background: #dc3a43; */
+    background-color: transparent;
+    color: #FFF;
+}
+.modal-content{
+    background: transparent;
+    border: none;
+}
+button:focus {
+    outline:0;
+}
+.modal-message{
+    /* padding: 1rem; */
+}
+#popup{
+    visibility: hidden;
+}
+app-trust-pilot-reviews {
+    background: #fdfbfb;
+    width: 100%;
+    float: left;
+    padding: 70px 0;
+}
+.design-item.text-center {
+    background: #f7f7f7;
+    padding: 50px 0 60px;
+}
+.design-item.text-center b {
+    position: relative;
+    color: #b5b1b1;
+}
+.design-your-cake-bg{
+    position: relative;
+    color: #b5b1b1;
+    z-index: 9;
+    font-size: 20px;  
+}
+.design-item.text-center {
+    padding: 30px 80px 30px;
+    background-image: url('/assets/images/home/store-address.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    min-height: 222px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #b5b1b1;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.design-item.text-center .btn2 {
+    border: 1px solid #b5b1b1;
+    color: #b5b1b1;
+    margin-top: 0rem;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    z-index: 9;
+}
+.design-item.text-center:before {
+    content: "";
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#design-your-cake .design-item.text-center {
+    background-image: url('/assets/images/home/design-choose.jpg');
+    background-position: center center;
+    background-size: 100%;
+    padding: 30px;
+    height: auto;
+}
+.design-item.text-center a.btn2 {
+    padding: 10px 32px !important;
+    background: rgba(0,0,0,0.3);
+}

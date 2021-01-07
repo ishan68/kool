@@ -1,0 +1,124 @@
+
+<ng-template #giantMenuTemplate let-giantMenu>
+  <div class="col-lg-3" *ngFor="let menu of giantMenu">
+    <ul class="list-unstyled">
+      <li *ngFor="let item of menu" [class.dropdown-submenu]="item.subMenu.length > 0">
+        <a *ngIf="item.subMenu.length < 1" class="dropdown-item" [routerLink] = "['/cakes']" [queryParams]="{categoryId: item._id}">
+          {{ item.name | uppercase }}
+        </a>
+        <button *ngIf="item.subMenu.length > 0" class="dropdown-item dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          {{ item.name | uppercase }} 
+          <i class="fa fa-caret-right"></i>
+        </button>
+        <ul class="dropdown-menu" *ngIf="item.subMenu.length > 0">
+          <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: item.subMenu }"></ng-container>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+
+<ng-template #recursiveMenu let-menu>
+  <li *ngFor="let item of menu" [class.dropdown-submenu]="item.subMenu.length > 0">
+    <a *ngIf="item.subMenu.length < 1" class="dropdown-item" [routerLink] = "['/cakes']" [queryParams]="{categoryId: item._id}">
+      {{ item.name | uppercase }}
+    </a>
+    <button *ngIf="item.subMenu.length > 0" class="dropdown-item dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      {{ item.name | uppercase }} 
+      <i class="fa fa-caret-right"></i>
+    </button>
+    <ul class="dropdown-menu" *ngIf="item.subMenu.length > 0">
+      <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: item.subMenu }"></ng-container>
+    </ul>
+  </li>
+</ng-template>
+
+<div class="navigation-wrap bg-light start-header start-style">
+    <div id="topbar" style="color:#FFF; background: #dc3a43;">
+        <div class="container">
+            <p style="padding:3px 3px; text-align:right"><a href="tel:020 70525152" ><i class="fa fa-phone"></i>&nbsp;020 70525152</a></p>
+        </div>
+        
+        
+      </div>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand" routerLink="/"><img src="../../../assets/images/latest-logo.png" alt=""></a>	
+          <div class="action-buttons">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <li class="nav-item dropdown mega-menu pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Our Cakes</a>
+
+                <div class="dropdown-menu border-0 p-0 m-0 my-2">
+                  <div class="container">
+                    <div class="row">
+                      <ng-container *ngTemplateOutlet="giantMenuTemplate; context:{ $implicit: giantMenu }"></ng-container>
+                      <!--<div class="col-lg-4">
+                        <h6 class="font-weight-bold text-uppercase">Parent Menu</h6>
+                        <ul class="list-unstyled">
+                        <li class="nav-item"><a class="dropdown-item" href="">Sub 1</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Sub 2</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Sub 3</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Sub 4</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Sub 5</a></li>
+                        </ul>
+                        </div>
+                      -->
+                    </div>
+
+                  </div>
+                </div>
+
+                <!--
+                  <ul class="dropdown-menu">
+                  <li *ngFor="let category of categories" class="">
+                  <a class="dropdown-item" [routerLink] = "['/cakes']" [queryParams]="{categoryId: category._id}">{{ category.name | uppercase }}</a>
+                  </li>
+                  <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: menu }"></ng-container>
+                  </ul>
+                -->
+              </li>
+
+              <!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="#">News</a>
+                </li> -->
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" routerLink="/offers">Offers</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" routerLink="/blogs">Blog</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" routerLink="/cake-builder">Cake Enquiry</a>
+                </li>
+
+
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!currentUser">
+                  <a class="nav-link" routerLink="/register">Register</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!currentUser">
+                  <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="currentUser" style="cursor:pointer">
+							<a class="nav-link" (click)="logout()">Logout</a>
+						</li>
+						<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+							<a class="nav-link" routerLink="/cart" style="font-size:17px;"><i class="fa fa-shopping-cart"></i></a>
+						</li>
+					</ul>
+				</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="my-4 py-4">
+	</div>

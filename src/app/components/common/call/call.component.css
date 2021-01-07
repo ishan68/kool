@@ -1,0 +1,19 @@
+#call{
+    position: fixed;
+    right:0;
+    bottom: 25%;
+    padding:12px;
+    text-align: center;
+    color:#FFF;
+    display: block;
+    background: #c15e42;
+    z-index: 200;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#call a{
+    color:#FFF;
+    font-size: 18px;
+    text-decoration: none;
+}

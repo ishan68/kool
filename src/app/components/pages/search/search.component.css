@@ -1,0 +1,53 @@
+#search-page-container{
+    padding-top:0px;
+    padding-bottom:50px;
+}
+
+.btn-primary{
+    background: #dc3a43;
+    border:none;    
+    border-radius:20px;
+    padding:5px 20px;
+    
+}
+
+.cake-item{
+    margin-bottom:20px;
+}
+
+.cake-item a{
+    text-decoration: none;
+}
+
+.cake-item h5{
+    color:#222;
+}
+
+.cake-item h6{
+    color:#dc3a43;
+}
+
+.cake-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#search-results {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+p{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.product-view-button{
+    background: #dc3a43;
+    color: #FFF;
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}

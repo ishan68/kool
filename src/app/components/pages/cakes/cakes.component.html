@@ -1,0 +1,38 @@
+<br>
+<div class="container" id="cake-page-container" style="max-width:1400px;">
+        
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cakes</li>
+            </ol>
+        </nav>
+        
+        <div class="categories-div">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let cake of cakes">
+                    <span *ngIf="!cake">
+                        <p>Hello there is not cake here</p>
+                    </span>
+                    <span *ngIf="cake">
+                        <div class="cake-item">
+                            <div class='card'>
+                                <div class="card-body text-center">
+                                    <a [routerLink] = "['/cake']" [queryParams]="{id: cake.id}">
+                                        <img class="img-fluid" src="{{cake.image}}"/>
+                                        <hr>
+                                        <h5>{{ cake.name }}</h5>
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>

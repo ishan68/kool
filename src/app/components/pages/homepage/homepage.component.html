@@ -1,0 +1,418 @@
+<!--Main Slider-->
+<div id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+<!--       <li data-target="#main-carousel" data-slide-to="1"></li>
+      <li data-target="#main-carousel" data-slide-to="2"></li> -->
+    </ul>
+
+  
+    
+    <!-- Main Slider -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 134}">
+                <img src="../../../../assets/images/banners/home-banner.png"/>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#main-carousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#main-carousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+
+<!--Content caontainer-->
+<div class="container" id="content-container">
+
+
+    <div id="deals">
+        <h3 class="text-center">Deals On Cakes - Discounts & Offers</h3>
+        <div class="row">
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 129}"  class="btn2">Fresh Cream</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 134}" class="btn2">Birthday Cakes</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 163}" class="btn2">Wedding Cakes</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 124}" class="btn2">Casino Themed</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 105}" class="btn2">Castle Cakes</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="deal-button-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 102}" class="btn2">Unicorn Cakes</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <!--Cake Categories-->
+    <div id="category">
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="category-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 134}">
+                        <img src="../../../../assets/images/mobile-banners/1stbday-min.png" alt="" class="img-fluid">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="category-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 146}">
+                        <img src="../../../../assets/images/mobile-banners/kids-min.png" alt="" class="img-fluid">
+                    </a>          
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="category-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 163}">
+                        <img src="../../../../assets/images/mobile-banners/wedding-min.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="category-item">
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 160}">
+                        <img src="../../../../assets/images/mobile-banners/anniversary-min.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!--Paw Petrol Cakes-->
+     <div id="paw-petrol-cakes" class="cake-section">
+        <h2>Paw Patrol Cakes</h2>
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 133}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576323044/books/zhpmmxkn1zi8ux5f29zc.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Paw Patrol Picture Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 132}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576322955/books/kswaljhswk3wrezsxouc.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Picture Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 131}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576322870/books/ze0t8m3md3mf2rpshyth.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Picture Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 130}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576322823/books/m8c1atblzojnwh6nxohe.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Picture Cake</span>
+                </a>    
+            </div>
+        </owl-carousel>
+    </div>
+
+
+    <!--Fresh Cream Cakes-->
+    <div id="fresh-cream-cakes" class="cake-section">
+        <h2>Fresh Cream Cakes</h2>
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 265}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576498853/books/ifn6k40a00ln5apnaa4g.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Heart Shape Chocolate Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 316}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576596363/books/dqverlk0yfulfpkvj4nv.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Number Shape Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 318}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576596757/books/rir2znjejg2ljzerdq88.jpg" class="img-fluid" alt="">
+                    <hr>    
+                    <span>Makeup Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 134}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576605156/books/s0nnhopxhdqe2sbd2giz.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Birthday Cake</span>
+                </a>    
+            </div>
+            
+        </owl-carousel>
+    </div>
+
+
+    <!--Baby Shower Cakes-->
+    <div id="baby-shower-cakes" class="cake-section">
+        <h2>Baby Shower Cakes</h2>
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >  
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 283}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576514120/books/d3ux8qrw07hadg086sql.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Blue and Pink Baby Shower Icing Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 303}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576547038/books/intehvhbevd9vttaewjt.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Baby shower Cake with Pink or Blue Sponge</span>
+                    </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 252}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576491946/books/egiyp8htwrforkxlxvw5.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Baby shower Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 282}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576513821/books/mu4yrbykxeeapgrfokzn.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Baby shower Cake</span>
+                </a>    
+            </div>
+        </owl-carousel>
+    </div>
+
+    
+
+    
+
+    <!--Wedding Cakes by owl carousel-->
+    <div id="wedding-cakes" class="cake-section">
+        <h2>Wedding Cakes</h2>
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >  
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 90}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576259398/books/xadqu5lxwsoswyggbuul.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Tiered Cake with Lace Design</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 96}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576260396/books/dcmexluvayimtdqsqifr.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Cascading Flower Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 313}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576548717/books/fyp1ylzahkh1u7z2mk7b.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Tiered Mehndi Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 478}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1577667141/books/vmtvwjvq7qo4gheiyl7e.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Tiered Wedding Cake</span>
+                </a>    
+            </div>
+        </owl-carousel>
+    </div>
+
+     
+
+
+     <!--Casino cake by owl carousel-->
+     <div id="casino-cakes" class="cake-section">
+        <h2>Casino Cakes</h2>
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >  
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 78}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576257515/books/xrnlbexcvrcdw3zuy1gk.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Roulette Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 76}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576257243/books/a3ndboqxqlvosucjlyut.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>2 Tiered Casino Cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 75}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576257147/books/v9igyrk8kowuvf3pwmfe.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Designer 2 tiered Dice cake</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 72}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576256907/books/za6c4nrwbxt8kuqmldjb.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Casino Themed</span>
+                </a>    
+            </div>
+        </owl-carousel>
+    </div>
+
+   
+
+    <!--Peppa Pig cake by owl carousel-->
+    <div class="cake-section" id="peppa-pig-cakes">
+        <h2>Peppa Pig Cakes</h2>    
+        <owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']" >  
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 195}">
+                    <img src="https://res.cloudinary.com/akumar6841/image/upload/v1576377862/books/cst5gbcwhhgom5juoyyp.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Peppa Pig Cake With Picture</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 191}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576377087/books/fzjbldjsej3ahlghglkf.png" class="img-fluid" alt="">
+                    <hr>
+                    <span>Peppa Pig Cake With 2D Topper</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 193}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576377481/books/dp58pn3sbgja192mxnlw.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>2 Tiered Peppa Pig Cake with 2D Topper</span>
+                </a>    
+            </div>
+            <div class="item">
+                <a [routerLink] = "['/cake']" [queryParams]="{id: 335}">
+                    <img src="http://res.cloudinary.com/akumar6841/image/upload/v1576607522/books/xoag6gx1wclqup152jxj.jpg" class="img-fluid" alt="">
+                    <hr>
+                    <span>Tiered Peppa Pig Cake</span>
+                </a>    
+            </div>
+        </owl-carousel>
+    </div>
+     <!-- Design your cake or select predefined -->
+    <div class="cake-section" id="design-your-own-cake">
+        <h2>Would you like to Design your own Cake?</h2>
+        <!--Cake Categories-->
+    <div id="design-your-cake">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="design-item text-center">
+                    <div class="design-your-cake-bg">
+                    Choose from our Expert Cake Menu<br/><br/>
+                    <a [routerLink] = "['/cakes']" [queryParams]="{categoryId: 129}" class="btn2">Our Cakes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="design-item text-center">
+                    <div class="design-your-cake-bg">
+                    Try our Cake Designing Tool<br/><br/>
+                    <a [routerLink] = "['/cake-builder']"  class="btn2">Cake Builder</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+        <!-- Design your cake or select predefined -->
+        <div class="cake-section" id="store-addresses">
+            <h2>Store Addresses</h2>
+            <!--Cake Categories-->
+            <div id="store-addresses">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="design-item text-center">
+                            <b>KINGSBURY<br/> 2 Honeypot Lane, Kingsbury, NW9 9QD<br/> 020 8204 3949 <br/>kingsbury@koolcakes.co.uk</b>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="design-item text-center">
+                            <b>HESTON<br/> 9 Central Parade, New Heston Road, Heston, Middx. TW5 0LQ <br/>020 8577 6393<br/> heston@koolcakes.co.uk</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<app-trust-pilot-reviews></app-trust-pilot-reviews>
+
+
+
+<!--Modal-->
+<!-- <ng-template #content let-modal> -->
+<!--     <div class="modal-body" style="background: url('./../../../../assets/images/closed-popup.jpg'); background-position: center; background-repeat: no-repeat; height: 550px;"> -->
+<!--         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')"> -->
+<!--             <span aria-hidden="true">&times;</span> -->
+<!--           </button> -->
+<!--           <!-1- <br/><br/> -->
+<!--           <div class="modal-message text-center"> -->
+<!--             <img src="img-fluid" src="./../../../../assets/images/closed-popup.jpg" alt=""> -->
+<!--           </div> -1-> -->
+          
+<!--           <!-1- <div class="modal-message"> -->
+<!--             <h4>Until further notice, we have decided to briefly close our retail stores considering COVID-19</h4> -->
+<!--             <br> -->
+<!--             <h5>For any assistance, reach us on <a href="mail:support@koolcakes.uk" style="color: #FFF">support@koolcakes.uk</a> </h5> -->
+<!--             <br> -->
+<!--             <h5>We hope to come back soon and come back stronger.</h5> -->
+<!--             <br><br> -->
+<!--             <button type="button" class="btn pull-right" aria-label="Close" (click)="modal.dismiss('Cross click')"> -->
+<!--                 CLOSE -->
+<!--               </button> -->
+<!--           </div> -1-> -->
+<!--     </div> -->
+    
+<!--   </ng-template> -->
+  
+<!--   <button class="btn btn-lg btn-outline-primary" (click)="open(content)" id="popup">Launch demo modal</button> -->
+  

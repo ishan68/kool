@@ -1,0 +1,153 @@
+<section class="checkout">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Checkout</li>
+                </ol>
+            </nav>
+            <br>
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="deliver-address-div">
+                            <h4>Delivery Address</h4>
+                            <br>
+                            <div class="form-group">
+                                <label for="Last name">Name</label>
+                                <input type="name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors.required">Name is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Last name">Phone Number</label>
+                                <input type="text" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }"/>
+                                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                                    <div *ngIf="f.phone.errors.required">Phone is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Last name">Postal Code</label>
+                                <input type="text" formControlName="postalCode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.postalCode.errors }"/>
+                                <div *ngIf="submitted && f.postalCode.errors" class="invalid-feedback">
+                                    <div *ngIf="f.postalCode.errors.required">Postal code is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" rows="3"></textarea>
+                                <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                    <div *ngIf="f.address.errors.required">Address is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="Last name">City</label>
+                                    <input type="text" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }"/>
+                                    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                        <div *ngIf="f.city.errors.required">City is required</div>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <label for="Delivery date">Delivery date</label>
+                                <input type="date" formControlName="deliveryDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.deliveryDate.errors }"/>
+                                <div *ngIf="submitted && f.deliveryDate.errors" class="invalid-feedback">
+                                    <div *ngIf="f.deliveryDate.errors.required">Delivery date is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" [(ngModel)]="isAddressSame" formControlName="isAddressSame">&nbsp;Billing Address same as Delivery Address
+                            </div>
+                            <br>
+                            
+                        </div>
+                        <div class="billing-address-div" *ngIf="!isAddressSame">
+                            <h4>Billing Address</h4>
+                            <br>
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="name" formControlName="billingName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.billingName.errors }"/>
+                                <div *ngIf="submitted && f.billingName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.billingName.errors.required">Name is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Phone">Phone Number</label>
+                                <input type="text" formControlName="billingPhone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.billingPhone.errors }"/>
+                                <div *ngIf="submitted && f.billingPhone.errors" class="invalid-feedback">
+                                    <div *ngIf="f.billingPhone.errors.required">Phone is required</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="Postal Code">Postal Code</label>
+                                <input type="text" formControlName="billingPostalCode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.billingPostalCode.errors }"/>
+                                <div *ngIf="submitted && f.billingPostalCode.errors" class="invalid-feedback">
+                                    <div *ngIf="f.billingPostalCode.errors.required">Name is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea formControlName="billingAddress" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.billingAddress.errors }" rows="3"></textarea>
+                                <div *ngIf="submitted && f.billingAddress.errors" class="invalid-feedback">
+                                    <div *ngIf="f.billingAddress.errors.required">Address is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Last name">City</label>
+                                <input type="text" formControlName="billingCity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.billingCity.errors }"/>
+                                <div *ngIf="submitted && f.billingCity.errors" class="invalid-feedback">
+                                    <div *ngIf="f.billingCity.errors.required">Name is required</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-details">
+                            <table class="table">
+                                <thead>
+                                    <th>Cake</th>
+                                    <th>Detail</th>
+                                    <th>Quantity</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let lineItem of lineItems" >
+                                        <td>
+                                            <app-line-item [cakeId]="lineItem.cakeId"></app-line-item>
+                                        </td>
+                                        <td>
+                                            <span><b>Servings:</b>&nbsp;{{ lineItem.serving || '--' }}</span><br>
+                                            <span><b>Shape:</b>&nbsp;{{ lineItem.shape || '--' }}</span><br>
+                                            <span><b>Filling:</b>&nbsp;{{ lineItem.filling || '--' }}</span><br>
+                                            <span><b>Servings:</b>&nbsp;{{ lineItem.serving }}</span>
+                                        </td>
+                                        <td>{{ lineItem.quantity}}</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <div class="total-div" style="display:flex; justify-content: space-between;">
+                            
+                            <h5>Total Price</h5>
+                            <h5><i class="fa fa-euro">{{totalPrice}}</i></h5>
+                        </div>
+                        <br>
+                        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+                        <div class="action-buttons">
+                                
+                                <button [disabled]="loading" class="btn btn-danger btn-block">
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Place Order
+                                </button>
+                        </div>
+                         
+                            
+                    </div>
+                    
+                </div>
+            </form>
+            
+        </div>
+    </section>
